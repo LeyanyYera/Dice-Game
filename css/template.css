@@ -1,0 +1,115 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;}
+}
+
+label {
+    color: #777;
+}
+
+h3 {
+    color: #777;
+}
+
+h5{
+    color: #777;
+}
+
+h4{
+    color: #777;
+}
+
+h2{
+    color: #777;
+}
+
+.required {
+    font-size: medium
+}
+
+.tr-head{
+    background-color: #337AB7;
+    color: white
+}
+
+.form-component{
+    padding: 20px 15px 0 15px;
+}
+
+/*-----------------------------------LOGIN---------------------------------------------------*/
+
+body{
+    font-size: 12px;
+}
+
+#Contenedor{
+    width: 400px;
+    margin: 50px auto;
+    background-color: #F3EDED;
+    border: 1px solid #ECE8E8;
+    height: 400px;
+    border-radius:8px;
+    padding: 0px 9px 0px 9px;
+}
+
+.Icon span{
+    background: #A8A6A6;
+    padding: 20px;
+    border-radius: 120px;
+}
+
+.Icon{
+    margin-top: 10px;
+    margin-bottom:10px;
+    color: #FFF;
+    font-size: 50px;
+    text-align: center;
+}
+
+.opcioncontra{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.icon-color{
+    color: #777
+}
+
+
+
+
+
+
+
+
+
+
+
