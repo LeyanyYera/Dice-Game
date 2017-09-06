@@ -6,11 +6,19 @@
  * Time: 4:27 PM
  */
 
+/**
+ * Class Thrown
+ */
 class Thrown {
 
     private $thrown = array();
     private $score = 0;
 
+    /**
+     * DicesThrown constructor
+     * Fill $thrown with random numbers using rand() function
+     * Initialize $score property using calculateScore() function
+     */
     function __construct(){
         $this->thrown = array();
         for($i=0; $i<5; $i++){
@@ -19,14 +27,24 @@ class Thrown {
         $this->score = $this->calculateScore($this->thrown);
     }
 
+    /**
+     * @return array
+     */
     public function getThrown(){
         return $this->thrown;
     }
 
+    /**
+     * @return int
+     */
     public function getScore(){
         return $this->score;
     }
 
+    /**
+     * @param $throw
+     * @return int
+     */
     public function calculateScore($throw){
         $aux = array_count_values($throw);
         foreach($aux as $key => $value){
@@ -53,16 +71,28 @@ class Thrown {
     }
 }
 
+/**
+ * Class Game
+ */
 class Game {
 
     private $thrownArray;
 
+    /**
+     * Game constructor.
+     * Initialize $thrownArray array
+     * @param $throwCount
+     */
     function __construct($throwCount){
         for($i=0; $i<$throwCount; $i++){
             $this->thrownArray[] = new Thrown();
         }
     }
 
+    /**
+     * Generate a HTML table with the result of game
+     * @return string
+     */
     public function getResult(){
         $result = '<table id="throws" class="table table-striped table-bordered table-responsive table-hover">
                         <thead>
@@ -82,6 +112,10 @@ class Game {
         return $result;
     }
 
+    /**
+     * Generate HTML page to show the game results
+     * @return string
+     */
     public function show(){
         $page = '<!DOCTYPE html>
                 <html>
@@ -123,10 +157,15 @@ class Game {
         echo $page;
     }
 }
-
+/*
+ * Get field 'throw' using $_REQUEST global variable
+ */
 $throw_count = $_REQUEST['throw'];
+/*
+ * Creating an instance of Game to start
+ */
 $dicesGame = new Game($throw_count);
+/*
+ * Show result
+ */
 $dicesGame->show();
-
-
-
