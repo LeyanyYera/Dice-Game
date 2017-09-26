@@ -131,27 +131,25 @@ class Game {
                         <nav class="navbar" id="test" style="background-color: #337AB7">
                             <div class="container-fluid">
                                 <div class="navbar-header">
-                                    <a style="color: #f5f5f5" class="navbar-brand" href="#">Dice Game Results</a>
+                                    <p><img width="100px" src="dice.png" style="margin: 8px 0 0 90px"/></p>
                                 </div>
+                                <h2 style="color: white"><strong>Dice Game</strong></h2>
                             </div>
                         </nav>
                         <div class="container text-center">
                             <div class="row content">
                                 <div class="col-sm-12 text-left">
-                                    <h4><div class="form-component">Dice game results<hr></div></h4>';
-        $page .= $this->getResult();
-        $page .= '                  <div class="col-sm-6">
-                                        <div class="form-component">
-
-                                        </div>
+                                    <div class="form-component"><h4>Dice game results</h4>
+                                        <hr>';
+                                        $page .= $this->getResult();
+                                        $page .= '
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                         <footer class="container-fluid text-center" style="background-color: #337AB7">
-                    <strong><p style="color: #f5f5f5">Leyany Yera Moya. © 2017<br>Todos los derechos reservados</p></strong>
-                </footer>
+                            <strong><p style="color: #f5f5f5">Leyany Yera Moya. © 2017<br>Todos los derechos reservados</p></strong>
+                        </footer>
                     </body>
                 </html>';
         echo $page;

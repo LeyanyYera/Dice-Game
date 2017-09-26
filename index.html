@@ -11,30 +11,31 @@
     <link rel="stylesheet" type="text/css" href="css/template.css" />
 </head>
     <body>
-    <nav class="navbar" id="test" style="background-color: #337AB7">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a style="color: #f5f5f5" class="navbar-brand" href="#">Dice Game</a>
+        <nav class="navbar" id="test" style="background-color: #337AB7">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <p><img width="100px" src="dice.png" style="margin: 8px 0 0 90px"/></p>
+                </div>
+                <h2 style="color: white"><strong>Dice Game</strong></h2>
+            </div>
+        </nav>
+        <div class="container text-center">
+            <div class="row content">
+                <div class="col-sm-12 text-left">
+                    <div class="form-component"><h4>How many throw do you want to do?</h4><hr></div>
+                    <form method="post" action="game.php">
+                        <div class="col-sm-4">
+                            <input class="form-control" type="number" name="throw"  value="1" required>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="submit" value="Throwing dices" class="btn btn-primary"/>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </nav>
-    <div class="container text-center">
-        <div class="row content">
-            <div class="col-sm-12 text-left">
-                <h4><div class="form-component">How many throw do you want to do?<hr></div></h4>
-                <form method="post" action="game.php">
-                    <div class="col-sm-4">
-                        <input class="form-control" type="number" name="throw" required>
-                    </div>
-                    <div class="col-sm-4">
-                        <input type="submit" value="OK" class="btn btn-default"/>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <footer class="container-fluid text-center" style="background-color: #337AB7">
-        <strong><p style="color: #f5f5f5">Leyany Yera Moya. © 2017<br>Todos los derechos reservados</p></strong>
-    </footer>
-</body>
+        <footer class="container-fluid text-center" style="background-color: #337AB7">
+            <p style="color: #f5f5f5"><strong>Leyany Yera Moya. © 2017<br>Todos los derechos reservados</strong></p>
+        </footer>
+    </body>
 </html>
